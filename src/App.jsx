@@ -1,5 +1,6 @@
 import { ChecklistsWrapper } from "./components/ChecklistsWrapper"
 import { Container } from "./components/Container"
+import { Dialog } from "./components/Dialog"
 import { FabButton } from "./components/FabButton"
 import { Footer } from "./components/Footer"
 import { Header } from "./components/Header"
@@ -79,6 +80,7 @@ function App() {
             </FabButton>
           </Footer>
         </ChecklistsWrapper>
+        <Dialog />
       </Container>
     </main>
   )
