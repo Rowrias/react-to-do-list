@@ -61,6 +61,7 @@ function App() {
             <IconSchool /> Plano de estudos
           </Heading>
         </Header>
+        <Dialog />
         <ChecklistsWrapper>
           <SubHeading>Para estudar</SubHeading>
           <ToDoList>
@@ -80,7 +81,6 @@ function App() {
             </FabButton>
           </Footer>
         </ChecklistsWrapper>
-        <Dialog />
       </Container>
     </main>
   )

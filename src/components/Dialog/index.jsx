@@ -1,27 +1,27 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import './dialog.style.css';
 
 export function Dialog() {
-    const dialog = document.querySelector("dialog");
-    const showButton = document.querySelector("dialog + button");
-    const closeButton = document.querySelector("dialog button");
+    // const dialog = document.querySelector("dialog");
 
-    showButton.addEventListner("click", () => {
-        dialog.showModal();
-    });
+    const dialogRef = useRef(null)
 
-    closeButton.addEventListener("click", () => {
-        dialog.close();
-    });
+    const openDialog = () => {
+        dialogRef.current.showModal();
+    };
+
+    const closeDialog = () => {
+        dialogRef.current.close();
+    };
 
     return (
         <React.Fragment>
-            <dialog>
-                <button>Close</button>
-                <p>This modalhas a groovy backdrop</p>
+            <dialog ref={dialogRef}>
+                <button autoFocus onClick={closeDialog}>Close</button>
+                <p>This modal has a groovy backdrop</p>
             </dialog>
-            <button>Show the dialog</button>
+            <button onClick={openDialog}>Show the dialog</button>
         </React.Fragment>
     )
 }
