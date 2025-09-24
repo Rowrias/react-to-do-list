@@ -74,7 +74,7 @@ function App() {
     const description = formData.get('description')
     setTodos(prevState => {
       const todo = {
-        id: todos.length + 1,
+        id: prevState.length + 1,
         description: description,
         completed: false,
         createdAt: new Date().toISOString()
